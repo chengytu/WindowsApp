@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0DE8EDE8-0C4D-4F4B-80B3-D29AD1F18384}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinqDb</RootNamespace>
+    <AssemblyName>LinqDb</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.1.3\lib\net40\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BaseBLL.cs" />
+    <Compile Include="BLL\graduate_partBLL.cs" />
+    <Compile Include="BLL\Orderable.cs" />
+    <Compile Include="BLL\RBAC_ROLEBLL.cs" />
+    <Compile Include="BLL\StudentBLL.cs" />
+    <Compile Include="BLL\sys\SysDeptBLL.cs" />
+    <Compile Include="BLL\sys\SysDictBLL.cs" />
+    <Compile Include="BLL\sys\SysDictCodeBLL.cs" />
+    <Compile Include="BLL\sys\SysFileBLL.cs" />
+    <Compile Include="BLL\sys\SysUserBLL.cs" />
+    <Compile Include="BLL\SYS_USERBLL.cs" />
+    <Compile Include="BLL\view_Course_ChapPageBLL.cs" />
+    <Compile Include="BLL\View_graduword_lenBLL.cs" />
+    <Compile Include="BLL\View_gWord_lenTBLL.cs" />
+    <Compile Include="BLL\View_gWord_lenTspaceBLL.cs" />
+    <Compile Include="BLL\View_WordPartBLL.cs" />
+    <Compile Include="BLL\view_word_page_syn_typeBLL.cs" />
+    <Compile Include="BLL\View_ClassBLL .cs" />
+    <Compile Include="BLL\word_collegeBLL.cs" />
+    <Compile Include="BLL\word_graduateBLL.cs" />
+    <Compile Include="BLL\word_page_synBLL.cs" />
+    <Compile Include="DbContext.cs" />
+    <Compile Include="DbLog\EFIntercepterLogging.cs" />
+    <Compile Include="Mapping\StudentMap.cs" />
+    <Compile Include="Mapping\View_ClassMap - 复制.cs" />
+    <Compile Include="Mapping\View_ClassMap.cs" />
+    <Compile Include="Mapping\view_word_page_syn_typeMap.cs" />
+    <Compile Include="Mapping\word_collegeMap.cs" />
+    <Compile Include="Mapping\word_page_synMap.cs" />
+    <Compile Include="Mapping\graduate_partMap.cs" />
+    <Compile Include="Mapping\RBAC_ROLEMap.cs" />
+    <Compile Include="Mapping\sys\SysDeptMap.cs" />
+    <Compile Include="Mapping\sys\SysUserMap.cs" />
+    <Compile Include="Mapping\sys\Sys_DictCodeMap.cs" />
+    <Compile Include="Mapping\sys\Sys_DictMap.cs" />
+    <Compile Include="Mapping\sys\Sys_FileMap.cs" />
+    <Compile Include="Mapping\SYS_USERMap.cs" />
+    <Compile Include="Mapping\view_Course_ChapPageMap.cs" />
+    <Compile Include="Mapping\View_graduword_lenMap.cs" />
+    <Compile Include="Mapping\View_gWord_lenTMap.cs" />
+    <Compile Include="Mapping\View_gWord_lenTspaceMap.cs" />
+    <Compile Include="Mapping\View_WordPartMap.cs" />
+    <Compile Include="Mapping\word_graduateMap.cs" />
+    <Compile Include="Model\CourseChaPage.cs" />
+    <Compile Include="Model\CourseChapter.cs" />
+    <Compile Include="Model\CourseDialogue.cs" />
+    <Compile Include="Model\CourseVideo.cs" />
+    <Compile Include="Model\CourseWord.cs" />
+    <Compile Include="Model\graduate_part.cs" />
+    <Compile Include="Model\RBAC_ROLE.cs" />
+    <Compile Include="Model\StudentModel.cs" />
+    <Compile Include="Model\sys\BaseModel.cs" />
+    <Compile Include="Model\BaseModelExt.cs" />
+    <Compile Include="Model\CommData.cs" />
+    <Compile Include="Model\sys\SysDept.cs" />
+    <Compile Include="Model\sys\SysUser.cs" />
+    <Compile Include="Model\sys\Sys_Dict.cs" />
+    <Compile Include="Model\sys\Sys_DictCode.cs" />
+    <Compile Include="Model\sys\Sys_File.cs" />
+    <Compile Include="Model\sys\Wordslectbypart.cs" />
+    <Compile Include="Model\SYS_USER.cs" />
+    <Compile Include="Model\View_Class.cs" />
+    <Compile Include="Model\view_Course_ChapPage.cs" />
+    <Compile Include="Model\View_graduword_len.cs" />
+    <Compile Include="Model\View_gWord_lenT.cs" />
+    <Compile Include="Model\View_gWord_lenTspace.cs" />
+    <Compile Include="Model\View_WordPart.cs" />
+    <Compile Include="Model\View_word_college.cs" />
+    <Compile Include="Model\view_word_page_syn_type.cs" />
+    <Compile Include="Model\word_page_syn.cs" />
+    <Compile Include="Model\word_graduate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
